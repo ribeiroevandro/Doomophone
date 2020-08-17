@@ -9,47 +9,47 @@ export const Header = styled.div`
   padding: 30px;
   box-shadow: rgb(20, 18, 18) 0px 0.2rem 2rem;
 
-  button{
+  button {
     display: flex;
     font-size: 14px;
-    color: #87868B;
+    color: #87868b;
     padding: 80px;
     background-color: transparent;
     border-width: 0px;
     align-items: center;
 
-    img{
-      padding: 10px
+    img {
+      padding: 10px;
     }
   }
-`
+`;
 
 export const Game = styled.div`
   margin: 30px 0px 0px 30px;
   max-width: 960px;
 
-  h2{
+  h2 {
     font-weight: normal;
     font-size: 20px;
-    color: #87868B
+    color: #87868b;
   }
 
-  h1{
+  h1 {
     font-size: 26px;
     color: #ffffff;
     font-weight: bold;
     margin: 0px 0px 10px 0px;
   }
 
-  li{
+  li {
     justify-content: center;
     display: flex;
     margin-top: 15px;
 
-    ul{
+    ul {
       margin: 0 15px 0 15px;
 
-      button{
+      button {
         display: flex;
         align-items: center;
         border-width: 0px;
@@ -60,19 +60,19 @@ export const Game = styled.div`
         padding: 0 25px 0 25px;
         font-weight: 500;
 
-        img{
+        img {
           margin: 0 12px 0 0;
         }
 
-        div.color{
+        div.color {
           margin: 0 12px 0 0;
           width: 20px;
           height: 20px;
-          background-color: #EF233C;
+          background-color: #ef233c;
           border-radius: 50%;
           border: 1px solid #ffffff;
         }
       }
     }
   }
-`
+`;
