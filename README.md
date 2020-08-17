@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Prototype 
+
+Prototype aviable [here](https://www.figma.com/file/jyitoEsC9JhYwK0Ugy2CkE/Untitled?node-id=1%3A94).
+
 ## Available Scripts
 
 In the project directory, you can run:
