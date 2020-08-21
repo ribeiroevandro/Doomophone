@@ -1,6 +1,6 @@
 /* eslint-disable react/no-this-in-sfc */
 /* eslint-disable react/button-has-type */
-import React, { RefObject } from 'react';
+import React, { RefObject, useRef, useCallback } from 'react';
 import {
   ReactSketchCanvas,
   ReactSketchCanvasStates,
@@ -23,6 +23,12 @@ const canvaStyles = {
 };
 
 const Room: React.FC = () => {
+  const canvasRef = useRef<ReactSketchCanvas>(null);
+
+  const handleUndoCanvas = useCallback(() => {
+    return canvasRef.current?.undo();
+  }, []);
+
   return (
     <>
       <Header>
@@ -45,15 +51,11 @@ const Room: React.FC = () => {
           // eslint-disable-next-line @typescript-eslint/no-empty-function
           onUpdate={() => {}}
           allowOnlyPointerType="all"
+          ref={canvasRef}
         />
         <li>
           <ul>
-            <button
-              className="Undo"
-              onClick={() => {
-                this.canvas.undo();
-              }}
-            >
+            <button className="Undo" onClick={handleUndoCanvas}>
               <img src={undoImg} alt="undo" />
               undo
             </button>
