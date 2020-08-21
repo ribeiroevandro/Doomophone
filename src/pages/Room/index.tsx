@@ -1,7 +1,10 @@
 /* eslint-disable react/no-this-in-sfc */
 /* eslint-disable react/button-has-type */
-import React from 'react';
-import { ReactSketchCanvas } from 'react-sketch-canvas';
+import React, { RefObject } from 'react';
+import {
+  ReactSketchCanvas,
+  ReactSketchCanvasStates,
+} from 'react-sketch-canvas';
 
 import { Header, Game } from './styles';
 
@@ -31,8 +34,9 @@ const Room: React.FC = () => {
       </Header>
       <Game>
         <h2>Desenhe essa frase</h2>
-        <h1>Luigi com grandes Tetas</h1>
+        <h1>Lorem Ipsum</h1>
         <ReactSketchCanvas
+          // eslint-disable-next-line no-return-assign
           style={canvaStyles}
           background={`no-repeat url(${backgroundCanvas})`}
           width="960px"
@@ -44,7 +48,12 @@ const Room: React.FC = () => {
         />
         <li>
           <ul>
-            <button className="Undo" onClick={() => {}}>
+            <button
+              className="Undo"
+              onClick={() => {
+                this.canvas.undo();
+              }}
+            >
               <img src={undoImg} alt="undo" />
               undo
             </button>
