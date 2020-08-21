@@ -1,10 +1,7 @@
 /* eslint-disable react/no-this-in-sfc */
 /* eslint-disable react/button-has-type */
-import React, { RefObject, useRef, useCallback } from 'react';
-import {
-  ReactSketchCanvas,
-  ReactSketchCanvasStates,
-} from 'react-sketch-canvas';
+import React, { useRef, useCallback } from 'react';
+import { ReactSketchCanvas } from 'react-sketch-canvas';
 
 import { Header, Game } from './styles';
 
